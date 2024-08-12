@@ -12,7 +12,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return response()->json(UserTable::with('service')->get());
+        $users = UserTable::with('service')->get();
+        return response()->json($users);
     }
 
     public function store(Request $request)
