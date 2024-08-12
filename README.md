@@ -34,8 +34,8 @@ A Laravel-based web application for managing services and users, including servi
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/service-selection-app.git
-    cd service-selection-app
+    git clone https://github.com/Mostafizur-Pro/service_selection_app.git
+    cd service_selection_app
     ```
 
 2. **Install Dependencies**
