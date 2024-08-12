@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Selected extends Model
 {
     use HasFactory;
+    protected $table = 'selected';
+
     protected $fillable = ['user_id', 'service_id'];
 
     public function user()

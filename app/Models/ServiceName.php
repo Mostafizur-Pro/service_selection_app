@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ServiceName extends Model
 {
     use HasFactory;
+    protected $table = 'service_name';
     protected $fillable = ['name'];
 
     public function users()

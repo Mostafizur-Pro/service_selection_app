@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Unselected extends Model
 {
     use HasFactory;
+    protected $table = 'unselected';
     protected $fillable = ['user_id', 'service_id'];
 
     public function user()
