@@ -102,11 +102,7 @@ A Laravel-based web application for managing services and users, including servi
     - `PUT /api/users/{id}` - Update a user
     - `DELETE /api/users/{id}` - Delete a user
 
-- **Service Selection:**
-    - `POST /api/select-service` - Add a service to a user's selected list
-    - `POST /api/unselect-service` - Remove a service from a user's selected list
-    - `GET /api/selected-services/{userId}` - Retrieve all selected services for a specific user
-    - `GET /api/unselected-services/{userId}` - Retrieve all unselected services for a specific user
+
 
 ## Running the Application
 
