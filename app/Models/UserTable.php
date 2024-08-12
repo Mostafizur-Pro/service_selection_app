@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class UserTable extends Model
 {
     use HasFactory;
+    protected $table = 'user';
+
     protected $fillable = ['username', 'service_id'];
 
     public function service()
