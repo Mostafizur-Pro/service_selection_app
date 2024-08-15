@@ -80,8 +80,9 @@
         $('#serviceForm').submit(function(e) {
             e.preventDefault();
             let serviceId = $('#serviceId').val();
+            console.log('data', serviceId)
             let serviceName = $('#serviceName').val();
-            let url = serviceId ? `{{ url('/api/services/') }}/${serviceId}` : '{{ url(' / api / services ') }}';
+            let url = serviceId ? `{{ url('/api/services/') }}/${serviceId}` : `{{ url('/api/services') }}`;
             let method = serviceId ? 'PUT' : 'POST';
 
             $.ajax({

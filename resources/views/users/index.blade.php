@@ -64,7 +64,7 @@
                                 <tr>
                                     <td>${user.id}</td>
                                     <td>${user.username}</td>
-                                    <td>${user.service_name || 'Not Selected'}</td>
+                                    <td>${user.service_id || 'Not Selected'}</td>
                                     <td>
                                         <button class="btn btn-primary btn-sm editUserBtn" data-id="${user.id}" data-username="${user.username}" data-service-id="${user.service_id}">Edit</button>
                                         <button class="btn btn-danger btn-sm deleteUserBtn" data-id="${user.id}">Delete</button>
@@ -85,6 +85,7 @@
                 method: 'GET',
                 success: function(data) {
                     let serviceSelect = $('#serviceId');
+                    console.log('s', serviceSelect)
                     serviceSelect.empty();
                     data.forEach(function(service) {
                         serviceSelect.append(`<option value="${service.id}">${service.name}</option>`);
@@ -107,7 +108,7 @@
             let userId = $('#userId').val();
             let username = $('#username').val();
             let serviceId = $('#serviceId').val();
-            let url = userId ? `{{ url('/api/users/') }}/${userId}` : '{{ url(' / api / users ') }}';
+            let url = userId ? `{{ url('/api/users/') }}/${userId}` : `{{ url('/api/users') }}`;
             let method = userId ? 'PUT' : 'POST';
 
             $.ajax({
@@ -140,8 +141,8 @@
         // Delete user
         $(document).on('click', '.deleteUserBtn', function() {
             let userId = $(this).data('id');
-
-            $.ajax({
+            // console.log('userid', userId)
+            $.ajax({                
                 url: `{{ url('/api/users/') }}/${userId}`,
                 method: 'DELETE',
                 data: {

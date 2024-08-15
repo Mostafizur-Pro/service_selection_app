@@ -49,6 +49,6 @@ class UserController extends Controller
     {
         $user = UserTable::findOrFail($id);
         $user->delete();
-        return response()->json('User deleted successfully');
+    
     }
 }
